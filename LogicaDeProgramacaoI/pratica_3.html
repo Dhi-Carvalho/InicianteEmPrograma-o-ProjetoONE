@@ -1,0 +1,60 @@
+<meta charset = "UTF-8">
+
+<h1>Prática Lógica de Programação - Aula 03</h1>
+
+<h3>Objetivo:</h3>
+
+<p>Utilizar todo os conceitos aprendidos no curso <strong>Lógica de Programação I:</strong> Os primeiros programas com JavaScript e HTML.</p>
+
+<script>
+	alert("Bem-vindo a atividade prática da aula 03");
+	
+	var nome = "Diogo";
+	var sobrenome = "Santana";
+	var apelido = "Dhi Carvalho";
+	
+	document.write("Meu nome é " + nome + " " + sobrenome + " conhecido como " + apelido + ".");
+	document.write("<br>");
+	
+	var anoNascimento = 1985;
+	var anoAtual = 2022;
+	
+	idade = anoAtual - anoNascimento;
+	
+	document.write("Tenho " + idade + " anos.");
+	document.write("<br>");
+	document.write("Estou me formando em <strong>Análise e Desenvolvimento de Sistemas</strong>, no momento buscando conhecimento em programação, principalmente WEB."); 
+	document.write("<br>");
+	
+	document.write("<h3>Cálculo da média de alunos</h3>");
+	
+	var aluno1 = "Nathan";
+	var aluno2 = "Maria Júlia";
+	var aluno3 = "Tony";
+	var aluno4 = "Gleyce";
+	
+	document.write("Este programa calculará a média dos alunos " + aluno1 + ", " + aluno2 + ", " + aluno3 + " e " + aluno4 + ".");
+	document.write("<br>");
+	document.write("<br>");
+	
+	var notaAluno1 = 5.5;
+	var notaAluno2 = 8;
+	var notaAluno3 = 6.4;
+	var notaAluno4 = 9.3;
+	
+	document.write(aluno1 + " - " + notaAluno1);
+	document.write("<br>");
+	document.write(aluno2 + " - " + notaAluno2);
+	document.write("<br>");
+	document.write(aluno3 + " - " + notaAluno3);
+	document.write("<br>");
+	document.write(aluno4 + " - " + notaAluno4);
+	document.write("<br>");
+	document.write("<br>");
+	
+	notaTotal = notaAluno1 + notaAluno2 + notaAluno3 + notaAluno4;
+	media = notaTotal / 4;
+	
+	document.write("A média dos alunos é " + Math.round(media));
+	
+</script>

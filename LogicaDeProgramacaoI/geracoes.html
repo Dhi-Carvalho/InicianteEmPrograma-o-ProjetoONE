@@ -1,0 +1,30 @@
+<meta charset = "UTF-8">
+
+<h3>O Problema das Gerações!!!</h3>
+
+<script>
+	function pulaLinha() {
+		document.write("<br>");
+	};
+	function exibeParagrafo(paragrafo) {
+		document.write(paragrafo);
+		pulaLinha();
+	};
+	function mostraGeracoes(frase) {
+		pulaLinha();
+		document.write(frase);
+	};
+	
+	var anoAtual = 2020;
+	var anoDescoberta = 1500;
+	var mediaDeAnos = 28;
+	
+	anosPassados = anoAtual - anoDescoberta;
+	geracoes = anosPassados / mediaDeAnos;
+	
+	
+	exibeParagrafo("Em média, um casal tem filhos quando atinge a idade de 28 anos.");
+	exibeParagrafo("Sendo assim, quantas gerações se passaram desde a descoberta do Brasil em 1500?");
+	mostraGeracoes("Se passaram " + anosPassados + " anos desde a descoberta do Brasil e se passaram " + Math.trunc(geracoes) + " gerações desde então.");
+	
+</script>
