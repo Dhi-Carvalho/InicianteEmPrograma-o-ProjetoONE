@@ -1,0 +1,69 @@
+<meta charset = "UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br>");
+	};
+	
+	function mostraTitulo(titulo) {
+		document.write(titulo);
+	};
+	
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	};
+	
+	function calculaImc(altura, peso) {
+		return peso / (altura * altura);
+	};
+	
+	function mostraImc(texto) {
+		pulaLinha();
+		document.write(texto);
+		pulaLinha();
+		pulaLinha();
+	};
+	
+	var nome = prompt("Informe seu nome: ");
+	var dataNascimento = prompt("Por favor, " + nome + " informe sua data de nascimento: ");
+	var genero = prompt("Por favor, " + nome + " informe seu gênero: ");
+	var alturaInformada = prompt(nome + ", agora informe sua altura: ");
+	var pesoInformado = prompt(nome + ", agora informe seu peso: ");
+	
+	var imc = calculaImc(alturaInformada, pesoInformado);
+	
+	mostraTitulo("<h3>Calculando o valor do Índice de Massa Corporal</h3>");
+	mostra("<strong>Nome: </strong>" + nome);
+	mostra("<strong>Nascido em : </strong>" + dataNascimento);
+	mostra("<strong>Gênero: </strong>" + genero);
+	mostra("<strong>Altura: </strong>" + alturaInformada + " M");
+	mostra("<strong>Peso: </strong>" + pesoInformado + " Kg");
+	mostraImc(nome + ", o seu IMC é " + Math.round(imc) + ".");
+	
+	if (imc < 18.5) {
+		mostra(nome + ", você está abaixo do peso.");
+	};
+	
+	if (imc >= 18.5 && imc <= 24.9) {
+		mostra(nome + ", seu peso está normal.");
+	};
+	
+	if (imc >= 25 && imc <= 29.9) {
+		mostra(nome + ", você está Pré-obeso.");
+	};
+	
+	if (imc >= 30 && imc <=34.9) {
+		mostra(nome + ", você está com Obesidade Grau I.");
+	};
+	
+	if (imc >= 35 && imc <= 39.9) {
+		mostra(nome + ", você está com Obesidade Grau II.");
+	};
+	
+	if (imc > 40) {
+		mostra(nome + ", você está com Obesidade Grau III.");
+	};
+	
+</script>
