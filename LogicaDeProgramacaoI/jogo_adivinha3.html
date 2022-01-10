@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    };
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    };
+	
+	var nome = prompt("Antes de começarmos, informe seu nome.");
+	var n = prompt(nome + "! Vamos começar nosso jogo! Escolha entre 10, 100 e 1000!");
+	
+	function sorteia (n) {
+		return Math.round(Math.random() * n);
+	};
+	
+	var numeroPensado = sorteia(n);
+	
+	var qtdChutes = prompt(nome + ", Escolha a quantidade de chutes entre 1 e 3");
+	
+	if (qtdChutes == 1) {
+		var chute = parseInt(prompt(nome + ", já pensei. Qual você acha que é?"));
+		
+		if(chute == numeroPensado) {
+			mostra("Uau!" + nome + ", Você acertou, pois eu pensei no " + numeroPensado);
+		} else {
+			if(chute > numeroPensado) {
+				mostra(nome + ", Você errou! Seu chute é maior que o número pensado!");
+			} else {
+				mostra(nome + ",Você errou! Seu chute é menor que o número pensado!");
+			}
+		}
+	}
+	
+	if (qtdChutes == 3) {
+		var chute1 = parseInt(prompt(nome + ", Já pensei. Sua primeira tentativa é?"));
+		
+		if(chute1 == numeroPensado) {
+			mostra("Uau!" + nome + ", Você acertou, pois eu pensei no " + numeroPensado);
+		} else {
+			if(chute1 > numeroPensado) {
+				mostra(nome + ", Você errou! Seu chute é maior que o número pensado! Você possui mais duas tentativas!");
+			} else {
+				mostra(nome + ",Você errou! Seu chute é menor que o número pensado! Você possui mais duas tentativas!");
+			}
+        }
+		
+		var chute2 = parseInt(prompt("Vamos para sua segunda tentativa?"));
+		
+		if(chute2 == numeroPensado) {
+			mostra("Uau!" + nome + ", Você acertou, pois eu pensei no " + numeroPensado);
+		} else {
+			if(chute2 > numeroPensado) {
+				mostra(nome + ", Você errou! Seu chute é maior que o número pensado! Você possui uma última tentativa!");
+			} else {
+				mostra(nome + ", Você errou! Seu chute é menor que o número pensado! Você possui uma última tentativa!");
+			}
+        }
+		
+		var chute3 = parseInt(prompt("Vamos para sua última tentativa?"));
+		
+		if(chute3 == numeroPensado) {
+			mostra("Uau!" + nome + ", Você acertou, pois eu pensei no " + numeroPensado);
+		} else {
+			if(chute3 > numeroPensado) {
+				mostra(nome + ", Você errou! Seu chute é maior que o número pensado! Que pena, acabaram suas tentativas!");
+			} else {
+				mostra(nome + ", Você errou! Seu chute é menor que o número pensado! Que pena, acabaram suas tentativas!");
+			}
+        }
+	}
+</script>

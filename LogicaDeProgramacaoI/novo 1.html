@@ -1,8 +1,8 @@
 <meta charset="UTF-8">
 
 <script>
-    function pulaLinha() {
 
+    function pulaLinha() {
         document.write("<br>");
     }
 
@@ -11,24 +11,17 @@
         pulaLinha();
     }
 
-    function a(texto) {
+    var quantidadeCarbono1 = parseInt(prompt("Quantidade de carbono substância 1"));
+    var quantidadeCarbono2 = parseInt(prompt("Quantidade de carbono substância 2"));
 
-        return "(" + texto + ")";
+    quantidadeCarbono2 = quantidadeCarbono2 + 2;
+
+    if(quantidadeCarbono1 == quantidadeCarbono2 ) {
+
+        mostra("Acho que são substâncias parecidas");
+    } else {
+
+        mostra("São substâncias bem diferentes");
     }
-
-    function b(texto) {
-
-        return "@" + texto + "@";
-    }
-
-    function c(nome, sobrenome) {
-
-        return b(nome + " " + a(sobrenome));
-
-    }
-
-    var resultado = c("Flávio", "Almeida");
-
-    mostra(resultado);
 
 </script>
