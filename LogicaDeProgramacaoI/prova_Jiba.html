@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+	
+	function titulo(titulo) {
+		document.write(titulo);
+	}
+	
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+	
+	var jogadores = ["Saladino", "Cage", "Xur", "Rayson"];
+	
+	titulo("<h3>Lista de Jogadores:</h3>");
+	
+	for(var i = 0; i < jogadores.length; i++) {
+		mostra(jogadores[i]);
+	}
+
+	mostra("FIM");
+</script>
