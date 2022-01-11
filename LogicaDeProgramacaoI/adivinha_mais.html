@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<label>Digite sua tentativa:</label>
+<br><br>
+<input />
+<br><br>
+<button>Compare com o meu segredo</button>
+
+<script>
+	var nome = prompt("Antes de começarmos, informe seu nome.");
+	
+	function sorteia() {
+		return Math.round(Math.random() * 10);
+	};
+	
+	var segredo = sorteia();
+	
+	var input = document.querySelector("input");
+	input.focus();
+	var button = document.querySelector("button");
+	
+	function verifica() {
+		if(input.value == segredo) {
+			alert(nome + ", Você ACERTOU!!!");
+		} else {
+			alert(nome + ", Você ERROU!!!!!");
+		}
+		input.value="";
+		input.focus();
+	}
+	
+	button.onclick = verifica;
+</script>
