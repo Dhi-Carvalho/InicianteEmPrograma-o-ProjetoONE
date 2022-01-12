@@ -11,6 +11,7 @@
 	nome = prompt("Favor me informe seu nome:");
 	var n = prompt(nome + "! Vamos começar nosso jogo! Escolha entre 10, 100 e 1000!");
 	var quantSegredos = prompt(nome + ", quantos segredos você quer:");
+	var tentativas = prompt("Teantativas:");
 	
 	function sorteia() {
 		return Math.round(Math.random() * n);
@@ -40,6 +41,7 @@
 		return segredos;
 	}
     var segredos = sorteiaNumeros(quantSegredos);
+	console.log(segredos);
 	
 	var button = document.querySelector("button");
     var input = document.querySelector("input");
@@ -47,24 +49,33 @@
 
     function verifica() {
 		var achou = false;
-
-		for(var posicao = 0; posicao < segredos.length; posicao++) {
-			if(input.value == segredos[posicao]) {
-				alert("Você ACERTOU!");
-				achou = true;
-				break;
+		
+			for(var posicao = 0; posicao < segredos.length; posicao++) {
+				if(input.value == segredos[posicao]) {
+					alert("Você ACERTOU!");
+					achou = true;
+					break;
+				}
 			}
-		}
 
-		if(achou == false) {
-			alert("Você ERROU!");
+			if(achou == false) {
+				alert("Você ERROU!");
+			}
+			input.value = "";
+			input.focus();
+		
+	}
+	
+	function tentativa(quantidade) {
+		var numero = 1
+		
+		while(numero <= quantidade) {
+			verifica;
+			numero++;
 		}
-
-		input.value = "";
-		input.focus();
 	}
 	
 	
-	button.onclick = verifica;
+	button.onclick = tentativa(tentativas);
 	
 </script>
