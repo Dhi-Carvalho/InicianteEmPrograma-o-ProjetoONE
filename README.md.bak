@@ -11,7 +11,3 @@ Neste primeiro módulo somos apresentados aos conceitos mais básicos de **Lógi
 Em HTML foram apresentados os conceitos de **Tag's** e **Metadados**. Assim como as regras de sintaxe da linguagem, como quais **tag's** devem ser fechadas ou não, o conceito de propriedades, entre outros.
 
 Em Javascript, primeiramente foi explicado como inserir o código no HTML, passando pelos conceitos de variáveis, funções, as regras de sintaxe da linguagem.
-
-**2. Lógica de Programação II: Pratique com desenhos, animações e um jogo**
-
-Neste segundo módulo somos apreesentados a uma nova **Tag**, a **canvas** que nos permite realizar desenhos utilizando **APIs** no **Javascript**, primeiramente foi ensinado como criar retângulo, triângulo e circulo.
